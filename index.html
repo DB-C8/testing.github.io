@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture X - Coworking Space</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <button class="menu-btn">
+                    <img src="assets/images/menu icon default.svg" alt="Menu" class="menu-icon">
+                    <span class="menu-text">MENU</span>
+                </button>
+                
+                <div class="logo">
+                    <a href="#top" style="text-decoration: none;">
+                        <img src="assets/images/Venture X logo.svg" alt="Venture X">
+                    </a>
+                </div>
+                
+                <a href="https://meetings.hubspot.com/terry-wallace?__hstc=7859245.02b2bc4fdf24239feadc3d8bebcb31f4.1736778315460.1736778315460.1736782788744.2&__hssc=7859245.3.1736782788744&__hsfp=336580338&uuid=073f544a-ba02-48d5-949c-e9ffcbcadb2e" target="_blank" class="cta-button">Book a Tour <span>→</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add this right after the header -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <div class="menu-header">
+            <div class="menu-container">
+                <button class="menu-close">
+                    <img src="assets/images/menu close icon.svg" alt="Close Menu" class="close-icon">
+                    <span>MENU</span>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="menu-content">
+            <div class="menu-container">
+                <ul class="menu-items">
+                    <li>
+                        <a href="#new-location" class="menu-link">
+                            <span>Locations</span>
+                            <img src="assets/images/Menu arrow icon.svg" alt="→" class="menu-arrow">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resources-section" class="menu-link">
+                            <span>Why Choose Us</span>
+                            <img src="assets/images/Menu arrow icon.svg" alt="→" class="menu-arrow">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#solutions-section" class="menu-link">
+                            <span>Solutions</span>
+                            <img src="assets/images/Menu arrow icon.svg" alt="→" class="menu-arrow">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#faq-section" class="menu-link">
+                            <span>FAQs</span>
+                            <img src="assets/images/Menu arrow icon.svg" alt="→" class="menu-arrow">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <p class="subtitle">Two locations, endless possibilities for growth</p>
+                <h1>BRIDGING NEW<br>OPPORTUNITIES<br>ACROSS THE<br> LEHIGH VALLEY</h1>
+                <a href="https://meetings.hubspot.com/terry-wallace?__hstc=7859245.02b2bc4fdf24239feadc3d8bebcb31f4.1736778315460.1736778315460.1736782788744.2&__hssc=7859245.3.1736782788744&__hsfp=336580338&uuid=073f544a-ba02-48d5-949c-e9ffcbcadb2e" target="_blank" class="btn btn-primary">Register Now</a>
+            </div>
+            
+            <div class="hero-video-container">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="assets/Hero section video.mp4" type="video/mp4">
+                </video>
+            
+                <div class="sticker-overlay">
+                    <img src="assets/images/herosticker.svg" alt="Sticker" class="hero-sticker">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-location" id="new-location">
+        <div class="container">
+            <div class="new-location-content">
+                <span class="label">New Location</span>
+                <h2>EXPANDING<br>CONNECTIONS</h2>
+                <p>Starting in Bethlehem, we became a hub for entrepreneurs and enterprises within the Lehigh Valley, with our new Allentown location, we're expanding to connect professionals, offering top amenities and a thriving community for business growth.</p>
+            </div>
+            <div class="location-images">
+                <img src="assets/images/newlocation1.png" alt="Venture X Location" class="location-img">
+                <img src="assets/images/newlocation2.png" alt="Venture X Location" class="location-img center">
+                <img src="assets/images/newlocation3.png" alt="Venture X Location" class="location-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section" id="locations">
+        <div class="container">
+            <span class="label">Locations</span>
+            <div class="locations-content">
+                <div class="locations-text">
+                    <h2>DISCOVER YOUR<br>IDEAL WORKSPACE</h2>
+                    <p>Enjoy seamless access to both Allentown and Bethlehem locations, connecting you to vibrant workspaces and a thriving professional community.</p>
+                </div>
+                <div class="locations-display">
+                    <div class="workspace-image">
+                        <img src="assets/images/Location Image.png" alt="Venture X Workspace" class="location-img">
+                    </div>
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources/Why Choose Us Section -->
+    <section class="resources-section" id="resources-section">
+        <div class="container">
+            <span class="label">Why choose us</span>
+            <div class="resources-content">
+                <h2>RESOURCES TO<br>NURTURE YOUR<br>WORKDAY</h2>
+                <p>Enjoy high-speed internet, equipped meeting rooms, cozy lounges, and premium coffee for a seamless and productive day.</p>
+            </div>
+        </div>
+        
+        <div class="infinite-scroll">
+            <div class="scroll-track track1">
+                <div class="scroll-content">
+                    <div class="scroll-item"><img src="assets/icons/24-7.svg" alt=""> 24/7 Access</div>
+                    <div class="scroll-item"><img src="assets/icons/meeting.svg" alt=""> Meeting Rooms</div>
+                    <div class="scroll-item"><img src="assets/icons/outdoor.svg" alt=""> Outdoor Space</div>
+                    <div class="scroll-item"><img src="assets/icons/whiteboard.svg" alt=""> Whiteboards</div>
+                    <div class="scroll-item"><img src="assets/icons/relax.svg" alt=""> Relaxation Area</div>
+                    <div class="scroll-item"><img src="assets/icons/print.svg" alt=""> Printing Services</div>
+                    <div class="scroll-item"><img src="assets/icons/quiet.svg" alt=""> Quiet Rooms</div>
+                    <div class="scroll-item"><img src="assets/icons/cafe.svg" alt=""> Café With Snacks</div>
+                </div>
+            </div>
+            
+            <div class="scroll-track track2">
+                <div class="scroll-content">
+                    <div class="scroll-item"><img src="assets/icons/cafe.svg" alt=""> Café With Snacks</div>
+                    <div class="scroll-item"><img src="assets/icons/quiet.svg" alt=""> Quiet Rooms</div>
+                    <div class="scroll-item"><img src="assets/icons/print.svg" alt=""> Printing Services</div>
+                    <div class="scroll-item"><img src="assets/icons/relax.svg" alt=""> Relaxation Area</div>
+                    <div class="scroll-item"><img src="assets/icons/whiteboard.svg" alt=""> Whiteboards</div>
+                    <div class="scroll-item"><img src="assets/icons/outdoor.svg" alt=""> Outdoor Space</div>
+                    <div class="scroll-item"><img src="assets/icons/meeting.svg" alt=""> Meeting Rooms</div>
+                    <div class="scroll-item"><img src="assets/icons/24-7.svg" alt=""> 24/7 Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions-section" id="solutions-section">
+        <div class="container">
+            <span class="label">Solutions</span>
+            <h2>FIND YOUR FERTILE<br>GROUND WITH OUR<br>FLEXIBLE WORKSPACE<br>SOLUTIONS!</h2>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <a href="https://90030.venturex.app/member-sign-up" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="assets/images/Hot Desks.png" alt="Shared Desks">
+                        <div class="card-content">
+                            <h3>SHARED DESKS</h3>
+                            <p>Starting at $300</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="solution-card">
+                    <a href="https://meetings.hubspot.com/terry-wallace?__hstc=7859245.02b2bc4fdf24239feadc3d8bebcb31f4.1736778315460.1736806004818.1737128944806.4&__hssc=7859245.1.1737128944806&__hsfp=336580338&uuid=91ec0e39-ae3c-4049-8e04-3c86b13ff79d" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="assets/images/Dedicated Desks.png" alt="Dedicated Desks">
+                        <div class="card-content">
+                            <h3>DEDICATED DESKS</h3>
+                            <p>Starting at $500</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="solution-card">
+                    <a href="https://meetings.hubspot.com/terry-wallace?__hstc=7859245.02b2bc4fdf24239feadc3d8bebcb31f4.1736778315460.1736806004818.1737128944806.4&__hssc=7859245.1.1737128944806&__hsfp=336580338&uuid=91ec0e39-ae3c-4049-8e04-3c86b13ff79d" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="assets/images/Private Office.png" alt="Private Offices">
+                        <div class="card-content">
+                            <h3>PRIVATE OFFICES</h3>
+                            <p>Starting at $850</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="solution-card">
+                    <a href="https://90030.venturex.app/member-sign-up-landing?center=4&productId=433" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="assets/images/Virtual Offices.png" alt="Virtual Offices">
+                        <div class="card-content">
+                            <h3>VIRTUAL OFFICES</h3>
+                            <p>Starting at $100</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="solution-card">
+                    <a href="https://meetings.hubspot.com/terry-wallace?__hstc=7859245.02b2bc4fdf24239feadc3d8bebcb31f4.1736778315460.1736806004818.1737128944806.4&__hssc=7859245.1.1737128944806&__hsfp=336580338&uuid=91ec0e39-ae3c-4049-8e04-3c86b13ff79d" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="assets/images/Day Pass.png" alt="Day Passes">
+                        <div class="card-content">
+                            <h3>DAY PASSES</h3>
+                            <p>Starting at $30</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="solution-card">
+                    <a href="https://90030.venturex.app/book-it-now?center=4&date=2025-01-17T11:00:00-0500&mode=day&filter=available" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="assets/images/Enterprise Solutions.png" alt="Meeting Rooms">
+                        <div class="card-content">
+                            <h3>MEETING ROOMS</h3>
+                            <p>Starting at $20</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq-section">
+        <div class="container">
+            <span class="label">FAQs</span>
+            <div class="faq-header">
+                <h2>GET ALL YOUR<br>QUESTIONS<br>ANSWERED</h2>
+                <p>Everything you need to know</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What amenities are available at Venture X?
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>At Venture X, we provide a comprehensive suite of amenities designed for modern professionals:</p>
+                        <ul>
+                            <li>High-speed fiber internet and secure Wi-Fi</li>
+                            <li>Fully equipped meeting rooms with video conferencing capabilities</li>
+                            <li>Premium coffee bar and refreshment station</li>
+                            <li>24/7 secure building access</li>
+                            <li>Professional-grade printing and scanning services</li>
+                            <li>Comfortable lounges and collaborative spaces</li>
+                            <li>Dedicated phone booths for private calls</li>
+                            <li>Mail and package handling services</li>
+                            <li>Regular networking events and community activities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I book a workspace at Venture X?
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Booking a workspace at Venture X is simple and flexible:</p>
+                        <ol>
+                            <li>Choose your preferred workspace option from our Solutions section</li>
+                            <li>For immediate bookings: Select your desired option and complete the booking process online</li>
+                            <li>For custom solutions: Schedule a tour to visit our locations and discuss your specific needs</li>
+                            <li>For day passes: Book directly through our website or walk in during business hours</li>
+                            <li>For meeting rooms: Use our online booking system to reserve your preferred time slot</li>
+                        </ol>
+                        <p>Our team is always available to help you find the perfect workspace solution for your needs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I access both locations if I am a member at one?
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! As a Venture X member, you enjoy seamless access to both our Allentown and Bethlehem locations. This includes:</p>
+                        <ul>
+                            <li>Full access to both facilities during business hours</li>
+                            <li>Ability to book meeting rooms at either location</li>
+                            <li>Access to community events at both venues</li>
+                            <li>Flexibility to work from whichever location is most convenient for you</li>
+                            <li>Same amenities and services available at both locations</li>
+                        </ul>
+                        <p>This dual-location access allows you to maximize your productivity across the Lehigh Valley.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What membership plans does Venture X offer?
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer various flexible membership plans to suit different working styles:</p>
+                        <ul>
+                            <li><strong>Shared Desks ($300/month):</strong> First-come-first-served workspace access</li>
+                            <li><strong>Dedicated Desks ($500/month):</strong> Your personal workspace in our community</li>
+                            <li><strong>Private Offices ($850/month):</strong> Secure, furnished private space</li>
+                            <li><strong>Virtual Office ($100/month):</strong> Professional business address and mail handling</li>
+                            <li><strong>Day Passes ($30/day):</strong> Flexible daily access</li>
+                            <li><strong>Meeting Rooms ($20/hour):</strong> Professional meeting spaces as needed</li>
+                        </ul>
+                        <p>All plans include access to our core amenities and community benefits.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is parking available at both locations?
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, both locations offer convenient parking options:</p>
+                        <ul>
+                            <li><strong>Bethlehem Location:</strong>
+                                <ul>
+                                    <li>Dedicated parking garage access</li>
+                                    <li>Street parking available</li>
+                                    <li>Special rates for members</li>
+                                </ul>
+                            </li>
+                            <li><strong>Allentown Location:</strong>
+                                <ul>
+                                    <li>On-site parking lot</li>
+                                    <li>Covered parking options</li>
+                                    <li>Visitor parking spaces</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>Additional parking details and rates are available at each location.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <h2>GROW WITH US</h2>
+                        <p>Starting in Bethlehem, we have became a hub for<br>entrepreneurs and enterprises in the Lehigh Valley.</p>
+                    </div>
+                    
+                    <div class="footer-form">
+                        <form>
+                            <div class="name-fields">
+                                <input type="text" placeholder="First name" required>
+                                <input type="text" placeholder="Last name" required>
+                            </div>
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">Book a Tour</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-info">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/company/venture-x-bethlehem-pa/" target="_blank"><img src="assets/images/Linkedin.svg" alt="LinkedIn"></a>
+                            <a href="https://www.facebook.com/venturexbethlehem/" target="_blank"><img src="assets/images/Facebook.svg" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/venturexbethlehem/?hl=en" target="_blank"><img src="assets/images/Instagram.svg" alt="Instagram"></a>
+                            <a href="#" target="_blank"><img src="assets/images/X.svg" alt="X"></a>
+                        </div>
+                        <p>306 S New Street <br>Bethlehm, PA 18015</p>
+                    </div>
+                    
+                    <div class="footer-logo">
+                        <a href="/" style="text-decoration: none;">
+                            <img src="assets/images/Venture X logo white.svg" alt="Venture X">
+                        </a>
+                    </div>
+                    
+                    <div class="powered-by">
+                        <a href="https://www.web610.com" target="_blank">
+                            <img src="assets/images/Web610 logo.svg" alt="Web610">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

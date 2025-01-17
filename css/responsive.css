@@ -1,0 +1,678 @@
+/* Tablet Devices (768px and below) */
+@media (max-width: 768px) {
+    /* Prevent Horizontal Scroll */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* General Layout */
+    .container {
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* Header */
+    .navbar {
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-trigger {
+        position: relative;
+        z-index: 2;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .cta-button {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-section .container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    /* Updated Video Styles */
+    .hero-video-wrapper {
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        overflow: hidden;
+    }
+
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* New Location Section */
+    .new-location {
+        padding: 60px 0;
+    }
+
+    .new-location h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .new-location p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .location-images {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .location-img {
+        max-width: 100%;
+    }
+
+    /* Locations Section */
+    .locations-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .locations-section .subtitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .locations-text {
+        text-align: center;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .locations-text h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .locations-text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .locations-images {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+        padding: 60px 0;
+    }
+
+    .faq-section .subtitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .faq-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .faq-header h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .faq-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .faq-container {
+        margin-top: 0;
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .faq-question {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 16px 20px 20px;
+    }
+
+    /* Menu Overlay Styles */
+    .fullscreen-menu {
+        padding: 1rem;
+    }
+
+    .menu-header {
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .menu-container {
+        padding: 0 1rem;
+    }
+
+    .menu-items {
+        padding: 0;
+    }
+
+    .menu-link {
+        font-size: 32px;
+        padding: 0.75rem 1rem;
+        font-weight: 400;
+    }
+
+    .menu-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 1rem;
+    }
+
+    .menu-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Hero Section */
+    .hero-content .btn {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+
+    /* Resources Section */
+    .resources-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .resources-section .subtitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .resources-content {
+        text-align: center;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resources-content h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .resources-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Scroll Items */
+    .scroll-item {
+        padding: 8px 20px;
+        padding-left: 12px;
+        font-size: 16px;
+    }
+
+    .scroll-item img {
+        width: 48px;
+        height: 48px;
+        padding: 6px;
+    }
+
+    /* Resources Section Slider */
+    .scroll-content {
+        gap: 16px;
+        animation: scroll 20s linear infinite;
+    }
+
+    .track2 .scroll-content {
+        animation-duration: 15s;
+    }
+
+    /* Solutions Section */
+    .solutions-section {
+        padding: 60px 0;
+    }
+
+    .solutions-section h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 0 20px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    /* Footer Section */
+    .footer-top {
+        padding: 60px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-left .subtitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .footer-left {
+        text-align: center;
+    }
+
+    .footer-left h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .footer-left p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .name-fields {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .footer-form input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+        padding: 30px 20px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    /* General Layout */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Header */
+    .navbar {
+        padding: 0 15px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 60px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 10px !important;
+        margin-bottom: 8px;
+    }
+
+    .hero-video-wrapper {
+        margin-top: 1.5rem;
+        padding-top: 75%; /* Adjusted for mobile aspect ratio */
+    }
+
+    .hero-video {
+        border-radius: 24px;
+    }
+
+    /* Locations Section */
+    .locations-section {
+        padding: 40px 16px;
+    }
+
+    .locations-section .subtitle {
+        font-size: 8px;
+    }
+
+    .locations-text h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .locations-text p {
+        font-size: 13px;
+    }
+
+    .locations-image-section {
+        display: none !important;
+    }
+
+    .locations-map-section {
+        width: 100% !important;
+        display: block !important;
+        padding-top: 0 !important;
+    }
+
+    /* New Location Section */
+    .new-location {
+        padding: 40px 16px;
+    }
+
+    .new-location h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .new-location p {
+        font-size: 13px;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+        padding: 40px 16px;
+    }
+
+    .faq-section .subtitle {
+        font-size: 8px;
+    }
+
+    .faq-header h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    .faq-header p {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .faq-container {
+        padding: 0;
+    }
+
+    .faq-question {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .faq-answer {
+        padding: 0 16px;
+        font-size: 13px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 12px 16px 16px;
+    }
+
+    /* Menu Overlay Styles */
+    .fullscreen-menu {
+        padding: 0.5rem;
+    }
+
+    .menu-container {
+        padding: 0 0.5rem;
+    }
+
+    .menu-link {
+        font-size: 24px;
+        padding: 0.5rem 0.75rem;
+    }
+
+    /* Hero Section */
+    .hero-content .btn {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    /* Resources Section */
+    .resources-section {
+        padding: 40px 16px;
+        text-align: center;
+    }
+
+    .resources-section .subtitle {
+        font-size: 8px;
+        margin-bottom: 8px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .resources-content h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .resources-content p {
+        font-size: 13px;
+    }
+
+    /* Scroll Items */
+    .scroll-item {
+        padding: 6px 16px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .scroll-item img {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+
+    /* Resources Section Slider */
+    .scroll-content {
+        gap: 12px;
+        animation: scroll 15s linear infinite;
+    }
+
+    .track2 .scroll-content {
+        animation-duration: 12s;
+    }
+
+    /* Solutions Section */
+    .solutions-section {
+        padding: 40px 16px;
+    }
+
+    .solutions-section h2 {
+        font-size: 18px;
+        margin-bottom: 24px;
+        text-align: left;
+        padding: 0;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+    }
+
+    /* Footer Section */
+    .footer-top {
+        padding: 40px 16px;
+    }
+
+    .footer-left .subtitle {
+        font-size: 8px;
+    }
+
+    .footer-left h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .footer-left p {
+        font-size: 13px;
+    }
+
+    .footer-form input {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .footer-form .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+        padding: 24px 16px;
+    }
+
+    .footer-logo {
+        display: none; /* Hide Venture X logo */
+    }
+
+    .powered-by img {
+        width: 120px;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+    }
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+} 
